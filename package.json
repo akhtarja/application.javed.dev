@@ -1,0 +1,18 @@
+{
+  "name": "application.javed.dev",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "rsync -a index.html ./build/",
+    "deploy": "aws s3 rm s3://application.javed.dev --recursive && aws s3 cp build s3://application.javed.dev --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --recursive --profile application-javed-dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhtarja/application.javed.dev.git"
+  },
+  "author": "Javed Akhtar",
+  "bugs": {
+    "url": "https://github.com/akhtarja/application.javed.dev/issues"
+  },
+  "homepage": "https://application.javed.dev"
+}
